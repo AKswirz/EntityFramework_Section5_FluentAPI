@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace DataAnnotations
+namespace FluentAPI
 {
     public class PlutoContext : DbContext
     {
@@ -35,6 +35,16 @@ namespace DataAnnotations
                         .HasMany(c => c.Tags)
                         .WithMany(t => t.Courses)
                         .Map(m => m.ToTable("CourseTags"));
+
+            modelBuilder.Entity<Course>()
+                        .HasRequired(c => c.Cover)
+                        .WithRequiredPrincipal(c => c.Course);
+
+            /* --- if you were to do this in the opposite direction, it would be this:
+            modelBuilder.Entity<Cover>()
+                        .HasRequired(c => c.Course)
+                        .WithRequiredDependent(c => c.Cover);
+            */
 
             base.OnModelCreating(modelBuilder);
         }
