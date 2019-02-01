@@ -28,7 +28,8 @@ namespace DataAnnotations
             modelBuilder.Entity<Course>()
                         .HasRequired(c => c.Author)
                         .WithMany(a => a.Courses)
-                        .HasForeignKey(c => c.AuthorId);
+                        .HasForeignKey(c => c.AuthorId)
+                        .WillCascadeOnDelete(false);
 
             base.OnModelCreating(modelBuilder);
         }
