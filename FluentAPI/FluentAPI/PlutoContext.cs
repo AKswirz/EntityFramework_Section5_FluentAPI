@@ -31,6 +31,11 @@ namespace DataAnnotations
                         .HasForeignKey(c => c.AuthorId)
                         .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Course>()
+                        .HasMany(c => c.Tags)
+                        .WithMany(t => t.Courses)
+                        .Map(m => m.ToTable("CourseTags"));
+
             base.OnModelCreating(modelBuilder);
         }
     }
