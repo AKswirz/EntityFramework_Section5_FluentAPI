@@ -94,5 +94,8 @@
       <DependentUpon>201901210242249_AddClassificationEnumToVideoClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Section5-Exercise-Description.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
