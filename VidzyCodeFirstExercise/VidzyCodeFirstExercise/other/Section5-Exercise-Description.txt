@@ -12,16 +12,13 @@ He was not happy about the schema you provided and has requested a few changes:
 Videos table
 -------------
 	• Name column cannot be NULL and its length should be maximum 255 characters.
-
 	• Genre_Id column should be renamed to GenreId, and it cannot be NULL.
-
 	• Classification column should be a tinyint.
 
 
 Genres table
 -------------
 	• Name column cannot be NULL and its length should be maximum 255 characters.
-
 
 Implement the requested changes using Fluent API. Organize your configurations into separates, one class per entity 
 (see the lecture “Organizing Fluent API Configurations” for more details).
@@ -77,7 +74,6 @@ created a separate migration to overwrite code-first conventions, in this iterat
 override the default conventions at the same time as adding the new classes.
 
 • The intermediary table for the many-to-many relationship between videos and tags should be called VideoTags.
-
 • This table should have two columns: VideoId and TagId.
 
 Apply the changes and create a new database script for your DBA.

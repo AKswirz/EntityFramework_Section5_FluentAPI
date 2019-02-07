@@ -22,8 +22,7 @@ namespace VidzyCodeFirstExercise
             modelBuilder.Entity<Video>()
                 .HasRequired(v => v.Genres)
                 .WithMany(g => g.Videos)
-                .HasForeignKey(v => v.GenreId)
-                .
+                .HasForeignKey(v => v.GenreId);
 
             base.OnModelCreating(modelBuilder); 
         }

@@ -95,7 +95,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Section5-Exercise-Description.txt" />
+    <Content Include="other\Section5-Exercise-Description.txt" />
+    <Content Include="other\VidzyCodeFirstExerciseDeploymentScript.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
