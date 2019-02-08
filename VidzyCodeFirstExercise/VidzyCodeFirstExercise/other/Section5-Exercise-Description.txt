@@ -25,21 +25,26 @@ Implement the requested changes using Fluent API. Organize your configurations i
 
 	Read the following hints before making any changes.
 
-Hint 1: Open the Videos table and note the type of Classification column. The reason this column is an int is because in C# enums are integers (by default). 
+Hint 1: 
+Open the Videos table and note the type of Classification column. The reason this column is an int is because in C# enums are integers (by default). 
 To change the type of this column, you need to change the Classification enum as follows:
 
 	public enum Classification : byte
 
-Hint 2: Once you override the default conventions and try to run Update-Database, you’ll encounter the following error:
+Hint 2: 
+Once you override the default conventions and try to run Update-Database, you’ll encounter the following error:
 
 	The object ‘DF__Videos__Classifi__1920BF5C’ is dependent on column ‘Classification’. 
 	ALTER TABLE ALTER COLUMN Classification failed because one or more objects access this column.
 
 In situations where you receive errors like this about database objects with some random identifiers 
-(eg DF__Videos__Classifi__1920BF5C), you need to inspect your database in SQL Server Management Studio. 
-Expand Videos > Constraints and you’ll see the constraint. Right-click it and select Script
-Constraint as > CREATE TO. This way you can see what this constraint does. In
-this case, it sets 0 as the default value for Classification. This was automatically
+(eg DF__Videos__Classifi__1920BF5C), you need to inspect your database in SQL Server Management Studio.
+
+	Expand Videos > Constraints and you’ll see the constraint. 
+	Right-click it and select Script Constraint as > CREATE TO. 
+
+This way you can see what this constraint does. 
+In this case, it sets 0 as the default value for Classification. This was automatically
 added by one of your earlier code-first migrations.
 
 The reason this constraint was added is because the Classification property of Video class is not nullable. 
@@ -55,7 +60,8 @@ Be sure to replace [constraint-name] with the name of constraint in your databas
 
 Then run the migration to make the changes to the Videos table.
 
-Hint 3: If you have a table open in the Table Designer in SQL Server Management Studio and then update your database using code-first migrations,
+Hint 3: 
+If you have a table open in the Table Designer in SQL Server Management Studio and then update your database using code-first migrations,
 you’ll not see the changes, even if you right-click on the table and open it again in the designer. 
 You need to close the existing table design session and re-open your table in the designer.
 

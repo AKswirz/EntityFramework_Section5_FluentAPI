@@ -24,6 +24,11 @@ namespace VidzyCodeFirstExercise
                 .WithMany(g => g.Videos)
                 .HasForeignKey(v => v.GenreId);
 
+            modelBuilder.Entity<Genre>()
+                .Property(g => g.name)
+                .IsRequired()
+                .HasMaxLength(255);
+
             base.OnModelCreating(modelBuilder); 
         }
     }

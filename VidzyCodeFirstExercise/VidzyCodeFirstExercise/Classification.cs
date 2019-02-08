@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VidzyCodeFirstExercise
 {
-    public enum Classification
+    public enum Classification : byte
     {
         Silver,
         Gold,

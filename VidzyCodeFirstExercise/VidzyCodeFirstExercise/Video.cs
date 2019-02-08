@@ -12,7 +12,7 @@ namespace VidzyCodeFirstExercise
         public string Name { get; set; }
         public DateTime ReleaseDate { get; set; }
         public Genre Genres { get; set; }
-        public int GenreId { get; set; }
+        public byte GenreId { get; set; }
         public Classification Classifications { get; set; }
     }
 }

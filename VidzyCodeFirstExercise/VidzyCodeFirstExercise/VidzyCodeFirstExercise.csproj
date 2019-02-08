@@ -68,6 +68,22 @@
     <Compile Include="Migrations\201901210242249_AddClassificationEnumToVideoClass.Designer.cs">
       <DependentUpon>201901210242249_AddClassificationEnumToVideoClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902082331554_VideoNameIsRequiredAndItHasASpecifiedLength.cs" />
+    <Compile Include="Migrations\201902082331554_VideoNameIsRequiredAndItHasASpecifiedLength.Designer.cs">
+      <DependentUpon>201902082331554_VideoNameIsRequiredAndItHasASpecifiedLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902082341077_VideoGenreIdRenamedAndIsRequired.cs" />
+    <Compile Include="Migrations\201902082341077_VideoGenreIdRenamedAndIsRequired.Designer.cs">
+      <DependentUpon>201902082341077_VideoGenreIdRenamedAndIsRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902082345553_ClassificationTypeChangeToByte.cs" />
+    <Compile Include="Migrations\201902082345553_ClassificationTypeChangeToByte.Designer.cs">
+      <DependentUpon>201902082345553_ClassificationTypeChangeToByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs" />
+    <Compile Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.Designer.cs">
+      <DependentUpon>201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +108,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901210242249_AddClassificationEnumToVideoClass.resx">
       <DependentUpon>201901210242249_AddClassificationEnumToVideoClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902082331554_VideoNameIsRequiredAndItHasASpecifiedLength.resx">
+      <DependentUpon>201902082331554_VideoNameIsRequiredAndItHasASpecifiedLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902082341077_VideoGenreIdRenamedAndIsRequired.resx">
+      <DependentUpon>201902082341077_VideoGenreIdRenamedAndIsRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902082345553_ClassificationTypeChangeToByte.resx">
+      <DependentUpon>201902082345553_ClassificationTypeChangeToByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.resx">
+      <DependentUpon>201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
