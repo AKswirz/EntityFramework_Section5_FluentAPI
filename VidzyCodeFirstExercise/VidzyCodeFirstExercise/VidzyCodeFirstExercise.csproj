@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classification.cs" />
+    <Compile Include="EntityConfigurations\GenreConfiguration.cs" />
+    <Compile Include="EntityConfigurations\VideoConfiguration.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Migrations\201901190055239_InitialModel.cs" />
     <Compile Include="Migrations\201901190055239_InitialModel.Designer.cs">
@@ -123,8 +125,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="other\notes.txt" />
     <Content Include="other\Section5-Exercise-Description.txt" />
     <Content Include="other\VidzyCodeFirstExerciseDeploymentScript.sql" />
+    <Content Include="other\VidzyCodeFirstExerciseDeploymentScript_FourthIteration.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

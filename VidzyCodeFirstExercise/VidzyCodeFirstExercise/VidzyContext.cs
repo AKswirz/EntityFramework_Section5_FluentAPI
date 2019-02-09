@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
+using VidzyCodeFirstExercise.EntityConfigurations;
 
 namespace VidzyCodeFirstExercise
 {
@@ -14,22 +10,8 @@ namespace VidzyCodeFirstExercise
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Video>()
-                .Property(v => v.Name)
-                .IsRequired()
-                .HasMaxLength(255);
-
-            modelBuilder.Entity<Video>()
-                .HasRequired(v => v.Genres)
-                .WithMany(g => g.Videos)
-                .HasForeignKey(v => v.GenreId);
-
-            modelBuilder.Entity<Genre>()
-                .Property(g => g.name)
-                .IsRequired()
-                .HasMaxLength(255);
-
-            base.OnModelCreating(modelBuilder); 
+            modelBuilder.Configurations.Add(new VideoConfiguration());
+            modelBuilder.Configurations.Add(new GenreConfiguration());
         }
     }
 }
