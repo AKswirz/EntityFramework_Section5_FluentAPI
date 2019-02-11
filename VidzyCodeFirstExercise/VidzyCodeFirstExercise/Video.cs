@@ -14,5 +14,6 @@ namespace VidzyCodeFirstExercise
         public Genre Genres { get; set; }
         public byte GenreId { get; set; }
         public Classification Classifications { get; set; }
+        public Tag Tags { get; set; }
     }
 }
