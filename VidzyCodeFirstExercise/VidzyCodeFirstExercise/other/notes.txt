@@ -1,4 +1,4 @@
-﻿Edit the App.config to reflect where it is that you are currently working at.
+﻿Edit the App.config to reflect where it is that you are currently working at. (work or home)
 
 
 DEPLOYING A DATABASE SCRIPT
@@ -11,3 +11,12 @@ In a real-world scenario, you may want to change the range of migrations include
 
 To do this, you can use:
 	Update-Database -Script -SourceMigration:Migr1 -TargetMigration:Migr2
+
+
+for exercise 5 and dealing with the VideoTags, refer back to video  section4, lecture 24 @ 4' 21"
+	public Virtual ICollection<Video> Videos {get; set;}
+	public Tag()
+	{
+		Videos = new HashSet<Video>()
+	}
+
