@@ -86,10 +86,6 @@
     <Compile Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.Designer.cs">
       <DependentUpon>201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902160033235_foo.cs" />
-    <Compile Include="Migrations\201902160033235_foo.Designer.cs">
-      <DependentUpon>201902160033235_foo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,9 +123,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.resx">
       <DependentUpon>201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902160033235_foo.resx">
-      <DependentUpon>201902160033235_foo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

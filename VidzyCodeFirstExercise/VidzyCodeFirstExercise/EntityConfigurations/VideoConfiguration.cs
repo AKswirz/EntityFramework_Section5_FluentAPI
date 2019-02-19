@@ -16,7 +16,12 @@ namespace VidzyCodeFirstExercise.EntityConfigurations
 
             HasMany(v => v.Tags)
                 .WithMany(t => t.Videos)
-                .Map(m => m.ToTable("VideoTags"));
+                .Map(m =>
+                {
+                    m.ToTable("VideoTags");
+                    m.MapLeftKey("VideoId");
+                    m.MapRightKey("TagId");
+                });
 
         }
         
