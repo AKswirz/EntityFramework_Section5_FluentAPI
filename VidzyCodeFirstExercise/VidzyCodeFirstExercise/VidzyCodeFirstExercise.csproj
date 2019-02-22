@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Classification.cs" />
     <Compile Include="EntityConfigurations\GenreConfiguration.cs" />
+    <Compile Include="EntityConfigurations\TagConfiguration.cs" />
     <Compile Include="EntityConfigurations\VideoConfiguration.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Migrations\201901190055239_InitialModel.cs" />
@@ -85,6 +86,10 @@
     <Compile Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs" />
     <Compile Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.Designer.cs">
       <DependentUpon>201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902222258532_addTags.cs" />
+    <Compile Include="Migrations\201902222258532_addTags.Designer.cs">
+      <DependentUpon>201902222258532_addTags.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -124,11 +129,15 @@
     <EmbeddedResource Include="Migrations\201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.resx">
       <DependentUpon>201902082354110_GenreNameIsRequiredAndHasSpecifiedLength.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902222258532_addTags.resx">
+      <DependentUpon>201902222258532_addTags.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="other\notes.txt" />
     <Content Include="other\Section5-Exercise-Description.txt" />
     <Content Include="other\VidzyCodeFirstExerciseDeploymentScript.sql" />
+    <Content Include="other\VidzyCodeFirstExerciseDeploymentScript_Fifthteration.sql" />
     <Content Include="other\VidzyCodeFirstExerciseDeploymentScript_FourthIteration.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

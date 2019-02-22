@@ -11,7 +11,9 @@ namespace VidzyCodeFirstExercise
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new VideoConfiguration());
-            modelBuilder.Configurations.Add(new GenreConfiguration());            
+            modelBuilder.Configurations.Add(new GenreConfiguration());
+
+            base.OnModelCreating(modelBuilder); // not sure what this does 2/22/19
         }
     }
 }
